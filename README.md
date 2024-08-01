@@ -57,7 +57,7 @@ More to play with, but probably not, color doesn't shine through:
 ### [Software Development Engineer, Microsoft Office SharePoint Server, October 2007 – July 2012]
 #### Maintained and developed features for PerformancePoint Services within MOSS. Implemented standards compliant HTML, CSS, and JS in an ASP.NET service application. Drove Accessibility, Internationalization, Globalization, and Localization standards within the development organization.
 ### [Software Development Engineer, Microsoft Office PerformancePoint 2007, September 2006 – October 2007]
-Implemented deployment feature using WiX to construct MSIs and C# to build a configuration wizard for the Monitoring Server team.
+#### Implemented deployment feature using WiX to construct MSIs and C# to build a configuration wizard for the Monitoring Server team.
 ### [Sofware Configuration Mangement Lead, ProClarity Corporation/Microsoft, February 2006 – September 2006]
 #### Team Lead for Software Configuration Management processes and infrastructure. Maintained source server and branching strategy. Facilitated assembly of software components into replete SKUs for products in various software lifecycle stages.
 ### [Software Development Engineer, ProClarity Corporation, January 2005 – January 2006]

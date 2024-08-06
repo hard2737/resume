@@ -105,4 +105,4 @@ More to play with, but probably not, color doesn't shine through:
 - ##### Secretary, Interfraternity Council at U of I 
 - ##### Moscow community: soccer coach, University leadership: IFC, ASUI consulting.
 ### REFERENCES
-###### Available upon request, or see https://www.linkedin.com/in/david-hardy-boi-dev/
+- ##### Available upon request, or see [https://www.linkedin.com/in/david-hardy-boi-dev/](https://www.linkedin.com/in/david-hardy-boi-dev/)

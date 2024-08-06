@@ -1,6 +1,6 @@
 const QRCode = require('qrcode');
 
-const url = 'https://hard2737.github.io/resume/r%C3%A9sum%C3%A9.pdf';
+const url = 'https://www.linkedin.com/in/david-hardy-boi-dev/';
 
 QRCode.toDataURL(url, (err, url) => {
   if (err) {
@@ -9,7 +9,7 @@ QRCode.toDataURL(url, (err, url) => {
     console.log(url);
   }
 });
-QRCode.toFile('docs/resume.png', url, (err) => {
+QRCode.toFile('docs/linkedin.png', url, (err) => {
   if (err) {
     console.error(err);
   } else {

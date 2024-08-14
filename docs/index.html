@@ -9,10 +9,13 @@
 	<meta property="og:description" content="This guy is a nerd" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:image" content="https://hard2737.github.io/resume/vcard.jpg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
 			background-color: black;
 			color: gold;
+			font-family: monospace;
+			font-size: 1.1em;
 		}
 
 		article {
@@ -21,22 +24,23 @@
 			padding: 20px;
 			border: 3px solid silver;
 			border-radius: 20px;
-			height: 97vh;
+			height: 90vh;
 		}
-
-		img {
-			border-radius: 50%;
-			margin: 0 auto;
+		#name::before {
+			content: "👨‍💻";
 		}
-
 		#name {
-			font-size: 2em;
+			font-size: 3em;
 			font-weight: bold;
 			display: flex;
 			text-align: middle;
 			align-items: center;
 			justify-content: center;
 			text-align: center;
+			flex-flow: row nowrap;
+		}
+		a:visited, a:active, a:link {
+			color: silver;
 		}
 	</style>
 </head>
@@ -45,8 +49,21 @@
 	<main>
 		<article>
 			<div id="name">
-				David Hardy<img src="https://hard2737.github.io/resume/vcard.jpg" alt="David Hardy 25 plus years ago"
-					width="100" height="100">
+				&nbsp;David Hardy
+				<svg width="120" height="120">
+					<defs>
+						<clipPath id="circleView">
+							<circle cx="60" cy="60" r="50" />
+						</clipPath>
+					</defs>
+					<image 
+					  width="120" 
+					  height="120" 
+					  xlink:href="https://hard2737.github.io/resume/vcard.jpg" 
+					  clip-path="url(#circleView)"
+					/>
+				 </svg>
+
 			</div>
 			<h2>Welcome</h2>
 			<p>

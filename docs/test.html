@@ -10,11 +10,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="apple-touch-icon" href="https://hard2737.github.io/resume/vcard.jpg">
 	<link rel="icon" href="https://hard2737.github.io/resume/vcard.jpg">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://hard2737.github.io/resume/index.css">
 	<title>David Hardy's CV</title>
 	<style>
-		#name::before {
-			content: "👨‍💻";
+		div, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul
+		{
+			padding-left: 4px;
+			border-left-width: 2px;
+			border-left-style: solid;
+			border-left-color: transparent;
+		}
+		div:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, ol:hover, p:hover, pre:hover, table:hover, ul:hover
+		{
+			padding-left: 4px;
+			border-left-width: 2px;
+			border-left-style: solid;
+			border-left-color: silver;
 		}
 		#name {
 			font-size: 2em;
@@ -22,13 +33,21 @@
 			display: flex;
 			text-align: middle;
 			align-items: center;
-			justify-content: center;
 			text-align: center;
 			flex-flow: row nowrap;
 		}
 		#canvasImageParent {
+			padding-left: 0px;
+			border-left-width: 0px;
+			border-bottom-width: 0px;
 			clip-path: circle(48%);
-			margin-left: 24px;
+		}
+		#nombreYapellido {
+			margin-left: 32px;
+		}
+		#dork {
+			margin-left: 32px;
+			font-size: 3em;
 		}
 	</style>
     <script>
@@ -69,11 +88,7 @@
 <body>
 	<main>
 		<article>
-			<div id="name">
-				&nbsp;David Hardy
-				<div width="120" height="120" id="canvasImageParent">
-				</div>
-			</div>
+			<div id="name"><div width="120" height="120" id="canvasImageParent"> </div><span id="nombreYapellido">David Hardy</span><span id="dork"> 👨‍💻 </span></div>
 			<h2>Welcome</h2>
 			<p>
 				Welcome to my CV micro-site! Here, you can easily navigate to key aspects of my professional and

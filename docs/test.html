@@ -27,11 +27,13 @@
 			flex-flow: row nowrap;
 		}
 		#canvasImageParent {
-			clip-path: circle(50%);
+			clip-path: circle(48%);
 			margin-left: 24px;
 		}
 	</style>
     <script>
+		const targetWidth = 120;
+		const targetHeight = 120;
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
 
@@ -41,9 +43,10 @@
         image.src = 'https://hard2737.github.io/resume/vcard.jpg';
 
         image.onload = () => {
-            canvas.width = image.width;
-            canvas.height = image.height;
-            ctx.drawImage(image, 0, 0);
+			const canvasImageParent = document.getElementById('canvasImageParent');
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+            ctx.drawImage(image, 0, 0, targetWidth, targetHeight);
 
             const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
             const data = imageData.data;
@@ -58,7 +61,7 @@
             }
 
             ctx.putImageData(imageData, 0, 0);
-            document.getElementById('canvasImageParent').appendChild(canvas);
+            canvasImageParent.appendChild(canvas);
         };
     </script>
 </head>

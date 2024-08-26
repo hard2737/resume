@@ -51,6 +51,8 @@
 		}
 	</style>
     <script>
+		const PAGE_CATEGORY = 'resume_landing_page';
+
 		const targetWidth = 120;
 		const targetHeight = 120;
         const canvas = document.createElement('canvas');
@@ -82,16 +84,35 @@
             ctx.putImageData(imageData, 0, 0);
             canvasImageParent.appendChild(canvas);
         };
+        function logGA(data) {
+			const category = data && data.category ? data.category : PAGE_CATEGORY;
+			const action = data && data.action ? data.action : 'click';
+			const label = data && data.label ? data.label : '';
+			const value = data && data.value ? data.value : 1;
+        	gtag('event', 'view_item', {
+        		'event_category': category,
+        		'event_label': label,
+        		'value': JSON.stringify(value)
+        	});
+		}
+        function clickResumeView(e) {
+			logGA({ label: 'resume' });
+        }
+        function clickCoverLetterView(e) {
+			logGA({ label: 'cover_letter' });
+        }
+        function clickLinkedIn(e) {
+			logGA({ label: 'linkedin' });
+        }
     </script>
 	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PDP390PE53"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PDP390PE53');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDP390PE53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PDP390PE53');
+    </script>
 	
 </head>
 
@@ -102,11 +123,11 @@
 			<h2>Welcome</h2>
 			<p>
 				Welcome to my CV micro-site! Here, you can easily navigate to key aspects of my professional and
-				personal journey. Explore <a href="https://hard2737.github.io/resume/r%C3%A9sum%C3%A9.pdf">my
+				personal journey. Explore <a onclick="clickResumeView(); return true;" target="_blank" href="https://hard2737.github.io/resume/r%C3%A9sum%C3%A9.pdf">my
 					résumés</a>
-				to get a detailed look at my skills and experiences, visit the <a
+				to get a detailed look at my skills and experiences, visit the <a onclick="clickCoverLetter(); return true;" target="_blank"
 					href="https://hard2737.github.io/resume/coverLetter.pdf">"About Me" page</a> to learn more about my
-				background and interests, or connect with me on <a
+				background and interests, or connect with me on <a onclick="clickLinkedIn(); return true;" target="_blank"
 					href="https://www.linkedin.com/in/david-hardy-boi-dev/">LinkedIn</a> for a broader perspective on my
 				professional network and achievements. Thank you for visiting, and I hope you find the information
 				you're looking for!
